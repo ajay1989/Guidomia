@@ -28,8 +28,10 @@ class MainViewModel : NSObject {
     // Call to fetch all vehicle data
     func getVehicleData() {
         
-        self.service?.fetchVehicleDataFromJson(input: kCarList) { [weak self] (vehicleArray) in
-            self?.vehicleData = vehicleArray
+        self.service?.fetchVehicleDataFromJson(input: kCarList) { [weak self] (response:[Vehicle]) in
+            self?.vehicleData = response
+            let firstData = self?.vehicleData?.first
+            firstData?.collapse = false
         }
     }
 }
