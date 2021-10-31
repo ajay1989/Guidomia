@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC16E05E272D8FDF001E676C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E05D272D8FDF001E676C /* MainViewController.swift */; };
+		DC16E06F272D9944001E676C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E06D272D9944001E676C /* FilterTableViewCell.swift */; };
+		DC16E070272D9944001E676C /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC16E06E272D9944001E676C /* FilterTableViewCell.xib */; };
+		DC16E076272D9B70001E676C /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E075272D9B70001E676C /* CosmosDistrib.swift */; };
+		DC16E07C272D9BEF001E676C /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E07A272D9BEF001E676C /* VehicleTableViewCell.swift */; };
+		DC16E07D272D9BEF001E676C /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC16E07B272D9BEF001E676C /* VehicleTableViewCell.xib */; };
+		DC16E082272D9FDB001E676C /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E081272D9FDB001E676C /* VehicleModel.swift */; };
+		DC16E088272DA3DD001E676C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E087272DA3DD001E676C /* Service.swift */; };
+		DC16E090272DA8EE001E676C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E08F272DA8EE001E676C /* UITableView+Extension.swift */; };
+		DC16E09B272E18CE001E676C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E09A272E18CE001E676C /* UITextField+Extension.swift */; };
+		DC16E0A9272E2D1C001E676C /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */; };
 		DCC49D25272D45F000DADB4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D24272D45F000DADB4D /* AppDelegate.swift */; };
 		DCC49D27272D45F000DADB4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D26272D45F000DADB4D /* SceneDelegate.swift */; };
-		DCC49D29272D45F000DADB4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D28272D45F000DADB4D /* ViewController.swift */; };
 		DCC49D2C272D45F000DADB4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2A272D45F000DADB4D /* Main.storyboard */; };
 		DCC49D2E272D45F200DADB4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2D272D45F200DADB4D /* Assets.xcassets */; };
 		DCC49D31272D45F200DADB4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2F272D45F200DADB4D /* LaunchScreen.storyboard */; };
 		DCC49D3C272D45F300DADB4D /* GuidomiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D3B272D45F300DADB4D /* GuidomiaTests.swift */; };
 		DCC49D47272D45F300DADB4D /* GuidomiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D46272D45F300DADB4D /* GuidomiaUITests.swift */; };
 		DCC49D64272D494700DADB4D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D63272D494700DADB4D /* Constant.swift */; };
-		DCC49D6D272D499400DADB4D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D6C272D499400DADB4D /* Extension.swift */; };
+		DCC49D6D272D499400DADB4D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D6C272D499400DADB4D /* UIColor+Extension.swift */; };
 		DCC49D72272D4A0900DADB4D /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D71272D4A0900DADB4D /* car_list.json */; };
+		DCC49D84272D77FE00DADB4D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D83272D77FD00DADB4D /* MainViewModel.swift */; };
+		DCC49D8D272D8B2400DADB4D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D8C272D8B2400DADB4D /* UIView+Extension.swift */; };
+		DCC49D97272D8B9400DADB4D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D96272D8B9400DADB4D /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +51,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC16E05D272D8FDF001E676C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DC16E06D272D9944001E676C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		DC16E06E272D9944001E676C /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		DC16E075272D9B70001E676C /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		DC16E07A272D9BEF001E676C /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		DC16E07B272D9BEF001E676C /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
+		DC16E081272D9FDB001E676C /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
+		DC16E087272DA3DD001E676C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DC16E08F272DA8EE001E676C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		DC16E09A272E18CE001E676C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		DCC49D21272D45F000DADB4D /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC49D24272D45F000DADB4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC49D26272D45F000DADB4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DCC49D28272D45F000DADB4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCC49D2B272D45F000DADB4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCC49D2D272D45F200DADB4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCC49D30272D45F200DADB4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,8 +76,11 @@
 		DCC49D46272D45F300DADB4D /* GuidomiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITests.swift; sourceTree = "<group>"; };
 		DCC49D48272D45F300DADB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC49D63272D494700DADB4D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		DCC49D6C272D499400DADB4D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DCC49D6C272D499400DADB4D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DCC49D71272D4A0900DADB4D /* car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
+		DCC49D83272D77FD00DADB4D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DCC49D8C272D8B2400DADB4D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DCC49D96272D8B9400DADB4D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +108,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC16E074272D9B60001E676C /* RatingLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				DC16E075272D9B70001E676C /* CosmosDistrib.swift */,
+			);
+			path = RatingLibrary;
+			sourceTree = "<group>";
+		};
+		DC16E086272DA3C4001E676C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC16E087272DA3DD001E676C /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC16E09F272E1E63001E676C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCC49D71272D4A0900DADB4D /* car_list.json */,
+				DCC49D2D272D45F200DADB4D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DCC49D18272D45F000DADB4D = {
 			isa = PBXGroup;
 			children = (
@@ -105,14 +156,13 @@
 		DCC49D23272D45F000DADB4D /* Guidomia */ = {
 			isa = PBXGroup;
 			children = (
+				DC16E086272DA3C4001E676C /* Service */,
 				DCC49D62272D47A900DADB4D /* Utility */,
-				DCC49D61272D476700DADB4D /* TableViewCells */,
-				DCC49D5F272D473400DADB4D /* ViewModels */,
-				DCC49D5E272D471E00DADB4D /* Models */,
-				DCC49D5D272D46E800DADB4D /* Storyboard */,
-				DCC49D5B272D46AF00DADB4D /* Controllers */,
+				DCC49D5F272D473400DADB4D /* ViewModel */,
+				DCC49D5E272D471E00DADB4D /* Model */,
+				DCC49D5B272D46AF00DADB4D /* View */,
 				DCC49D5A272D465500DADB4D /* Common */,
-				DCC49D2D272D45F200DADB4D /* Assets.xcassets */,
+				DC16E09F272E1E63001E676C /* Resources */,
 				DCC49D32272D45F200DADB4D /* Info.plist */,
 			);
 			path = Guidomia;
@@ -145,12 +195,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		DCC49D5B272D46AF00DADB4D /* Controllers */ = {
+		DCC49D5B272D46AF00DADB4D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DCC49D28272D45F000DADB4D /* ViewController.swift */,
+				DCC49D61272D476700DADB4D /* TableViewCells */,
+				DCC49D5D272D46E800DADB4D /* Storyboard */,
+				DCC49D96272D8B9400DADB4D /* BaseViewController.swift */,
+				DC16E05D272D8FDF001E676C /* MainViewController.swift */,
 			);
-			path = Controllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		DCC49D5D272D46E800DADB4D /* Storyboard */ = {
@@ -162,24 +215,29 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		DCC49D5E272D471E00DADB4D /* Models */ = {
+		DCC49D5E272D471E00DADB4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DCC49D71272D4A0900DADB4D /* car_list.json */,
+				DC16E081272D9FDB001E676C /* VehicleModel.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		DCC49D5F272D473400DADB4D /* ViewModels */ = {
+		DCC49D5F272D473400DADB4D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DCC49D83272D77FD00DADB4D /* MainViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DCC49D61272D476700DADB4D /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				DC16E06D272D9944001E676C /* FilterTableViewCell.swift */,
+				DC16E06E272D9944001E676C /* FilterTableViewCell.xib */,
+				DC16E07A272D9BEF001E676C /* VehicleTableViewCell.swift */,
+				DC16E07B272D9BEF001E676C /* VehicleTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -187,10 +245,23 @@
 		DCC49D62272D47A900DADB4D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				DC16E074272D9B60001E676C /* RatingLibrary */,
+				DCC49D88272D8AE600DADB4D /* Extension */,
 				DCC49D63272D494700DADB4D /* Constant.swift */,
-				DCC49D6C272D499400DADB4D /* Extension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		DCC49D88272D8AE600DADB4D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DCC49D6C272D499400DADB4D /* UIColor+Extension.swift */,
+				DCC49D8C272D8B2400DADB4D /* UIView+Extension.swift */,
+				DC16E08F272DA8EE001E676C /* UITableView+Extension.swift */,
+				DC16E09A272E18CE001E676C /* UITextField+Extension.swift */,
+				DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +367,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC16E07D272D9BEF001E676C /* VehicleTableViewCell.xib in Resources */,
 				DCC49D31272D45F200DADB4D /* LaunchScreen.storyboard in Resources */,
 				DCC49D2E272D45F200DADB4D /* Assets.xcassets in Resources */,
 				DCC49D72272D4A0900DADB4D /* car_list.json in Resources */,
+				DC16E070272D9944001E676C /* FilterTableViewCell.xib in Resources */,
 				DCC49D2C272D45F000DADB4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,11 +397,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCC49D6D272D499400DADB4D /* Extension.swift in Sources */,
-				DCC49D29272D45F000DADB4D /* ViewController.swift in Sources */,
+				DC16E09B272E18CE001E676C /* UITextField+Extension.swift in Sources */,
+				DC16E06F272D9944001E676C /* FilterTableViewCell.swift in Sources */,
+				DC16E0A9272E2D1C001E676C /* Optional+Extension.swift in Sources */,
+				DC16E088272DA3DD001E676C /* Service.swift in Sources */,
+				DCC49D6D272D499400DADB4D /* UIColor+Extension.swift in Sources */,
+				DCC49D8D272D8B2400DADB4D /* UIView+Extension.swift in Sources */,
+				DC16E076272D9B70001E676C /* CosmosDistrib.swift in Sources */,
 				DCC49D25272D45F000DADB4D /* AppDelegate.swift in Sources */,
 				DCC49D27272D45F000DADB4D /* SceneDelegate.swift in Sources */,
+				DCC49D97272D8B9400DADB4D /* BaseViewController.swift in Sources */,
+				DC16E07C272D9BEF001E676C /* VehicleTableViewCell.swift in Sources */,
+				DC16E090272DA8EE001E676C /* UITableView+Extension.swift in Sources */,
+				DC16E05E272D8FDF001E676C /* MainViewController.swift in Sources */,
 				DCC49D64272D494700DADB4D /* Constant.swift in Sources */,
+				DC16E082272D9FDB001E676C /* VehicleModel.swift in Sources */,
+				DCC49D84272D77FE00DADB4D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +590,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Guidomia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,6 +609,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Guidomia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tcR-j5-Qhg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Guidomia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGj-a7-Zyc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-qs-Llt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view key="tableHeaderView" contentMode="scaleToFill" id="0pu-ch-tYM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="276"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tacoma" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-Kf-mTJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="276"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tacoma 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7C-cQ-DYc">
+                                                    <rect key="frame" x="20" y="175" width="374" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="DcO-Yr-kbM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="41"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get your's now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzy-nc-XoU">
+                                                    <rect key="frame" x="27" y="222" width="367" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="5zy-fW-i6A"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="uzy-nc-XoU" firstAttribute="top" secondItem="O7C-cQ-DYc" secondAttribute="bottom" constant="2" id="3l2-Pc-A3t"/>
+                                                <constraint firstAttribute="bottom" secondItem="Szk-Kf-mTJ" secondAttribute="bottom" id="8HN-Tk-T4L"/>
+                                                <constraint firstAttribute="trailing" secondItem="O7C-cQ-DYc" secondAttribute="trailing" constant="20" id="D49-4Q-HDK"/>
+                                                <constraint firstAttribute="trailing" secondItem="Szk-Kf-mTJ" secondAttribute="trailing" id="Hkx-oA-wSs"/>
+                                                <constraint firstItem="Szk-Kf-mTJ" firstAttribute="top" secondItem="0pu-ch-tYM" secondAttribute="top" id="NT6-ov-7Ke"/>
+                                                <constraint firstItem="uzy-nc-XoU" firstAttribute="leading" secondItem="0pu-ch-tYM" secondAttribute="leading" constant="27" id="OhJ-e6-mmD"/>
+                                                <constraint firstItem="O7C-cQ-DYc" firstAttribute="leading" secondItem="0pu-ch-tYM" secondAttribute="leading" constant="20" id="UGM-Bt-2QR"/>
+                                                <constraint firstItem="Szk-Kf-mTJ" firstAttribute="leading" secondItem="0pu-ch-tYM" secondAttribute="leading" id="WXS-We-TWj"/>
+                                                <constraint firstAttribute="trailing" secondItem="uzy-nc-XoU" secondAttribute="trailing" constant="20" id="hub-eQ-DlW"/>
+                                                <constraint firstAttribute="height" constant="276" id="o3d-Hx-h95"/>
+                                                <constraint firstAttribute="bottom" secondItem="uzy-nc-XoU" secondAttribute="bottom" constant="30" id="ycW-wN-Wm2"/>
+                                            </constraints>
+                                        </view>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="WNO-gt-Kki"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="EYV-ve-XlS"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="KTk-qs-Llt" firstAttribute="top" secondItem="JGj-a7-Zyc" secondAttribute="top" id="Bkw-O7-PX9"/>
+                                    <constraint firstItem="KTk-qs-Llt" firstAttribute="leading" secondItem="JGj-a7-Zyc" secondAttribute="leading" id="D4x-PM-SAT"/>
+                                    <constraint firstAttribute="trailing" secondItem="KTk-qs-Llt" secondAttribute="trailing" id="Js4-Ts-ucH"/>
+                                    <constraint firstAttribute="bottom" secondItem="KTk-qs-Llt" secondAttribute="bottom" id="cqJ-ZA-egD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.37647058820000001" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JGj-a7-Zyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rr3-8Y-hUd"/>
+                            <constraint firstItem="JGj-a7-Zyc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nQD-vy-zht"/>
+                            <constraint firstAttribute="bottom" secondItem="JGj-a7-Zyc" secondAttribute="bottom" id="s0k-gn-waK"/>
+                            <constraint firstItem="JGj-a7-Zyc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vCl-7K-WjN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WPO-Q9-hiL"/>
+                    <connections>
+                        <outlet property="heightTopViewConstraint" destination="o3d-Hx-h95" id="S27-uw-PDX"/>
+                        <outlet property="mainTableView" destination="KTk-qs-Llt" id="3DH-ki-FB4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015.9420289855074" y="70.982142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fMl-Hv-bJ2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcR-j5-Qhg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="d9A-q7-ar4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ogc-hX-wwR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aM-ha-RW5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tacoma" width="1824" height="1216"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
