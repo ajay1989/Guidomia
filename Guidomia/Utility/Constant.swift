@@ -17,6 +17,9 @@ let kPros = "Pros"
 let kCons = "Cons"
 let kPrice = "Price"
 let kDidotBoldFont = "Didot-Bold"
+let kErrorJsonParsing = "Not able to parse the json"
+let kAppName = "Guidomia"
+let kOK = "OK"
 // TableviewCell Indentifier list
 struct TableCellIdentifier {
     

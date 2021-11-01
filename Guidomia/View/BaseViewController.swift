@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
         let label = UILabel()
         label.textColor = UIColor.white
         label.text = title
-        label.font = UIFont(name: kDidotBoldFont, size: 28.0) ?? UIFont.systemFont(ofSize: 22.0)
+        label.font = UIFont(name: kDidotBoldFont, size: 28.0) ?? UIFont.systemFont(ofSize: 28.0)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
     }
 }

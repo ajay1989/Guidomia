@@ -55,7 +55,7 @@ class VehicleTableViewCell: UITableViewCell {
     }
     
     func setProsCons() {
-        // TO DO: Guard let should implement here
+        
         let prosList = vehicleModelData?.prosList?.filter({$0 != "" }) ?? [String]()
         let consList = vehicleModelData?.consList?.filter({$0 != "" }) ?? [String]()
         let prosCount = prosList.count

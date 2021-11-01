@@ -35,6 +35,7 @@ class MainViewController: BaseViewController {
     func callToViewModel() {
         
         self.mainViewModel =  MainViewModel()
+        self.mainViewModel.delegate = self
         self.mainViewModel.bindVehicleViewModel = {
             self.updateTableView()
         }
@@ -94,6 +95,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             self.mainTableView.reloadData()
         }
     }
+}
+
+extension MainViewController: MainModelDelegate {
     
-    
+    func showAlert(title: String) {
+        self.popupAlert(message: title)
+    }
 }

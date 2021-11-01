@@ -11,7 +11,7 @@ class Service: NSObject {
     
     //Fetch from Local file json
     func fetchVehicleDataFromJson<T: Decodable>(input: String,
-                                                completion : @escaping (_ response: T) -> ()) {
+                                                completion : @escaping (_ response: T,_ status: Bool) -> ()) {
         
         do {
             guard let jsonUrl = Bundle.main.url(forResource: input, withExtension: kJson) else {
@@ -19,11 +19,11 @@ class Service: NSObject {
             }
             let data = try Data(contentsOf: jsonUrl)
             let response = try JSONDecoder().decode(T.self, from: data)
-            completion(response)
+            completion(response, true)
         }
         catch {
-            // TO DO: Handeling arror when unable to read json
             print(error)
+            completion([Vehicle]() as! T, false)
         }
     }
 }
