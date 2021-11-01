@@ -57,8 +57,8 @@ class VehicleTableViewCell: UITableViewCell {
     func setProsCons() {
         
         self.prosConsStackView.subviews.forEach({$0.removeFromSuperview()})
-        let prosList = vehicleModelData?.prosList?.filter({$0 != "" }) ?? [String]()
-        let consList = vehicleModelData?.consList?.filter({$0 != "" }) ?? [String]()
+        let prosList = vehicleModelData?.prosList?.filter({!$0.isEmpty }) ?? [String]()
+        let consList = vehicleModelData?.consList?.filter({!$0.isEmpty }) ?? [String]()
         let prosCount = prosList.count
         let consCount = consList.count
         var stackViewHeight: CGFloat = 0.0

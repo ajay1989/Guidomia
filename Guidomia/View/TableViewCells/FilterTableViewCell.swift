@@ -12,7 +12,8 @@ protocol FilterCallDelegate {
     func showAlert(title:String)
 }
 
-class FilterTableViewCell: UITableViewCell, UIPickerViewDelegate {
+class FilterTableViewCell: UITableViewCell,
+                           UIPickerViewDelegate {
 
     @IBOutlet private weak var txtVehicleModel: UITextField!
     @IBOutlet private weak var txtVehicleMake: UITextField!
@@ -48,7 +49,7 @@ extension FilterTableViewCell: UITextFieldDelegate {
         
         self.selectedTextField = textField
         if selectedTextField == txtVehicleModel {
-            if self.txtVehicleMake.text == "" {
+            if self.txtVehicleMake.text.unwrappedValue.isEmpty {
                 self.delegate?.showAlert(title: kErrorSelectVehicleMake)
                 return false
             }
@@ -59,8 +60,10 @@ extension FilterTableViewCell: UITextFieldDelegate {
     
     func showActionSheet(textField : UITextField) {
         
-        let vehcileMakeList = Array(Set(vehcileList.map({$0.make ?? ""})))
-        let vehcileModelList = Array(Set(vehcileList.filter({$0.make == self.txtVehicleMake.text}).map({$0.model ?? ""})))
+        var vehcileMakeList = Array(Set(vehcileList.map({$0.make ?? ""})))
+        var vehcileModelList = Array(Set(vehcileList.filter({$0.make == self.txtVehicleMake.text}).map({$0.model ?? ""})))
+        vehcileMakeList.sort()
+        vehcileModelList.sort()
         self.listing = textField == txtVehicleMake ? vehcileMakeList : vehcileModelList
         self.pickerView.reloadAllComponents()
     }

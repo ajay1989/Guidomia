@@ -36,7 +36,6 @@ class MainViewController: BaseViewController {
         self.mainViewModel =  MainViewModel()
         self.mainViewModel.delegate = self
         self.mainViewModel.bindVehicleViewModel = {
-            
             self.updateTableView()
         }
     }
@@ -51,7 +50,9 @@ class MainViewController: BaseViewController {
 }
 
 //MARK:- TableView delegate methods
-extension MainViewController: UITableViewDataSource, UITableViewDelegate, FilterCallDelegate {
+extension MainViewController: UITableViewDataSource,
+                              UITableViewDelegate,
+                              FilterCallDelegate {
     
     
     
@@ -98,7 +99,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, Filter
     func callForFilter(make: String,
                        model: String) {
         
-        if make == "" && model == "" {
+        if make.isEmpty && model.isEmpty {
             self.mainViewModel.resetData()
         } else {
             self.mainViewModel.filterForVehcile(make: make,

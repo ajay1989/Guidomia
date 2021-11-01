@@ -69,7 +69,7 @@ class MainViewModel : NSObject {
                           model: String) {
         
         self.vehicleData?.removeAll()
-        if make != "" && model == "" {
+        if !make.isEmpty && model.isEmpty {
             self.vehicleData = self.vehicleList?.filter({$0.make == make})
         } else {
             self.vehicleData = self.vehicleList?.filter({$0.make == make && $0.model == model})
