@@ -22,6 +22,7 @@ class Service: NSObject {
             completion(response)
         }
         catch {
+            // TO DO: Handeling arror when unable to read json
             print(error)
         }
     }

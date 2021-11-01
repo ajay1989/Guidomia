@@ -13,7 +13,10 @@ let kMainNavigationTitle = "GUIDOMIA"
 let kAspectRatio:CGFloat = 66.6666666667
 let kCarList = "car_list"
 let kJson = "json"
-
+let kPros = "Pros"
+let kCons = "Cons"
+let kPrice = "Price"
+let kDidotBoldFont = "Didot-Bold"
 // TableviewCell Indentifier list
 struct TableCellIdentifier {
     

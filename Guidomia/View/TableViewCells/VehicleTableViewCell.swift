@@ -9,7 +9,8 @@ import UIKit
 
 class VehicleTableViewCell: UITableViewCell {
     
-   
+    @IBOutlet weak var bottomstackViewConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var heightStackViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var prosConsStackView: UIStackView!
     @IBOutlet private weak var viewRating: CosmosView!
@@ -38,45 +39,51 @@ class VehicleTableViewCell: UITableViewCell {
             return
         }
         lblModelName.text = "\(vehcileData.make.unwrappedValue) \(vehcileData.model.unwrappedValue)"
-        lblPrice.text = "Price : \(vehcileData.customerPrice.unwrappedValue/1000)k"
+        lblPrice.text = "\(kPrice) : \(vehcileData.customerPrice.unwrappedValue/1000)k"
         viewRating.totalStars = vehcileData.rating.unwrappedValue
         imgVehicle.image = UIImage(named: "\(vehcileData.make.unwrappedValue) \(vehcileData.model.unwrappedValue)")
-        if !vehcileData.collapse {
-            self.setProsCons()
-            self.prosConsStackView.isHidden = false
-        }
-        else {
+        
+        if vehcileData.collapse {
             self.heightStackViewConstraint.constant = 0.0
             self.prosConsStackView.isHidden = true
+            self.bottomstackViewConstraint.constant = 4.0
+        } else {
+            self.setProsCons()
+            self.prosConsStackView.isHidden = false
+            self.bottomstackViewConstraint.constant = 30.0
         }
     }
     
     func setProsCons() {
-        
+        // TO DO: Guard let should implement here
         let prosList = vehicleModelData?.prosList?.filter({$0 != "" }) ?? [String]()
         let consList = vehicleModelData?.consList?.filter({$0 != "" }) ?? [String]()
         let prosCount = prosList.count
         let consCount = consList.count
-        var stackViewHeight:CGFloat = 0.0
+        var stackViewHeight: CGFloat = 0.0
         if prosCount > 0 {
             stackViewHeight = self.getTotalHeightOfLabels(list: prosList) + 30.0
-            setUpViews(title: "Pros", list: prosList, yaxis: 0.0)
+            setUpViews(title: kPros,
+                       list: prosList,
+                       verticalMargin: 0.0)
         }
         if consCount > 0 {
-            let defaultProsLabelHeight:CGFloat = prosCount > 0 ? 30.0 : 0.0
-            stackViewHeight = stackViewHeight + CGFloat(consCount * 30) + 30.0
-            setUpViews(title: "Cons", list: consList, yaxis: self.getTotalHeightOfLabels(list: prosList) + defaultProsLabelHeight)
+            let defaultProsLabelHeight: CGFloat = prosCount > 0 ? 40.0 : 0.0
+            stackViewHeight = stackViewHeight + self.getTotalHeightOfLabels(list: consList) + 30.0
+            setUpViews(title: kCons,
+                       list: consList,
+                       verticalMargin: prosCount > 0 ? self.getTotalHeightOfLabels(list: prosList) + defaultProsLabelHeight : defaultProsLabelHeight)
         }
-        self.heightStackViewConstraint.constant = CGFloat(stackViewHeight) + 16.0
+        self.heightStackViewConstraint.constant = CGFloat(stackViewHeight)
     }
     
     func setUpViews(title:String,
                     list:[String],
-                    yaxis:CGFloat) {
-        
+                    verticalMargin:CGFloat) {
+        // TO DO: yaxis should be change to vertical margin
         let appColor = AppColors()
         let titleView = UIView(frame: CGRect(x: 20.0,
-                                        y: yaxis,
+                                        y: verticalMargin,
                                         width: prosConsStackView.frame.width - 20.0,
                                         height: CGFloat(list.count * 30) + 30.0))
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: titleView.frame.width, height: 30))
@@ -84,24 +91,34 @@ class VehicleTableViewCell: UITableViewCell {
         titleLabel.font = UIFont.systemFont(ofSize: 21.0, weight: .medium)
         titleLabel.textColor = appColor.colorDarkGrey
         titleView.addSubview(titleLabel)
-        var yaxisOfBullet:CGFloat = 30.0
+        var verticalMarginOfBullet: CGFloat = 30.0
+        
         for i in 0..<list.count {
-            let bulletViews = UIView(frame: CGRect(x: 20.0, y: yaxisOfBullet, width: titleView.frame.width - 20, height: self.getHeightOfLabel(title: list[i])))
-            let circleView = UIView(frame: CGRect(x: 0, y: 10, width: 10, height: 10))
+            let bulletViews = UIView(frame: CGRect(x: 20.0,
+                                                   y: verticalMarginOfBullet,
+                                                   width: titleView.frame.width - 20,
+                                                   height: self.getHeightOfLabel(title: list[i])))
+            let circleView = UIView(frame: CGRect(x: 0,
+                                                  y: 10,
+                                                  width: 10,
+                                                  height: 10))
             circleView.backgroundColor = appColor.colorOrange
             circleView.cornerRadius = 5.0
             circleView.clipsToBounds = true
             bulletViews.addSubview(circleView)
-            let bulletLabel = UILabel(frame: CGRect(x: 20.0, y: 3.0, width: bulletViews.frame.width - 20, height: self.getHeightOfLabel(title: list[i])))
+            let bulletLabel = UILabel(frame: CGRect(x: 20.0,
+                                                    y: 3.0,
+                                                    width: bulletViews.frame.width - 20,
+                                                    height: self.getHeightOfLabel(title: list[i])))
             bulletLabel.text = list[i]
-            bulletLabel.font = UIFont.systemFont(ofSize: 18.0)
+            bulletLabel.font = UIFont.systemFont(ofSize: 18.0, weight: .medium)
             bulletLabel.numberOfLines = 0
             bulletLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
             bulletLabel.sizeToFit()
             bulletLabel.textColor = .black
             bulletViews.addSubview(bulletLabel)
             titleView.addSubview(bulletViews)
-            yaxisOfBullet +=  self.getHeightOfLabel(title: list[i])
+            verticalMarginOfBullet +=  self.getHeightOfLabel(title: list[i])
         }
         self.prosConsStackView.addSubview(titleView)
     }
@@ -110,6 +127,7 @@ class VehicleTableViewCell: UITableViewCell {
     func getTotalHeightOfLabels(list:[String]) -> CGFloat {
         
         var height:CGFloat = 0.0
+        
         for data in list {
             height += self.getHeightOfLabel(title: data)
         }
@@ -118,7 +136,10 @@ class VehicleTableViewCell: UITableViewCell {
     
     func getHeightOfLabel(title:String) -> CGFloat {
         
-        let label = UILabel(frame: CGRect(x: 60.0, y: 3.0, width: prosConsStackView.frame.width - 60.0, height: CGFloat.greatestFiniteMagnitude))
+        let label = UILabel(frame: CGRect(x: 60.0,
+                                          y: 3.0,
+                                          width: prosConsStackView.frame.width - 60.0,
+                                          height: CGFloat.greatestFiniteMagnitude))
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.font = UIFont.systemFont(ofSize: 18.0)

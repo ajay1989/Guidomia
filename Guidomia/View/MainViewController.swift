@@ -78,14 +78,14 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.row > 0 {
             let vehcileList = self.mainViewModel.vehicleData
             let listCount = vehcileList?.count ?? 0
             if vehcileList?[indexPath.row - 1].collapse == false {
                 let data = vehcileList?[indexPath.row - 1]
                 data?.collapse = true
-            }
-            else {
+            } else {
                 for i in 0..<listCount {
                     let data = vehcileList?[i]
                     data?.collapse = i == indexPath.row - 1 ? false : true
