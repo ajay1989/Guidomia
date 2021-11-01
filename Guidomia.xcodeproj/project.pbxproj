@@ -20,6 +20,9 @@
 		DC16E0A9272E2D1C001E676C /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */; };
 		DCB3162E272FA56300600D3D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3162D272FA56300600D3D /* UIViewController+Extension.swift */; };
 		DCB31633272FD44300600D3D /* ToolbarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB31632272FD44300600D3D /* ToolbarPickerView.swift */; };
+		DCB316732730419500600D3D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3164A2730362C00600D3D /* CoreDataManager.swift */; };
+		DCB3167F2730419E00600D3D /* Guidomia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCB3163827302BF300600D3D /* Guidomia.xcdatamodeld */; };
+		DCB316842730421900600D3D /* VehicleListCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB316832730421900600D3D /* VehicleListCoreData.swift */; };
 		DCC49D25272D45F000DADB4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D24272D45F000DADB4D /* AppDelegate.swift */; };
 		DCC49D27272D45F000DADB4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D26272D45F000DADB4D /* SceneDelegate.swift */; };
 		DCC49D2C272D45F000DADB4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2A272D45F000DADB4D /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		DCB3162D272FA56300600D3D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DCB31632272FD44300600D3D /* ToolbarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPickerView.swift; sourceTree = "<group>"; };
+		DCB3163927302BF300600D3D /* Guidomia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Guidomia.xcdatamodel; sourceTree = "<group>"; };
+		DCB3164A2730362C00600D3D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DCB316832730421900600D3D /* VehicleListCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListCoreData.swift; sourceTree = "<group>"; };
 		DCC49D21272D45F000DADB4D /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC49D24272D45F000DADB4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC49D26272D45F000DADB4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DCB3163727302BBB00600D3D /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3163827302BF300600D3D /* Guidomia.xcdatamodeld */,
+				DCB316832730421900600D3D /* VehicleListCoreData.swift */,
+				DCB3164A2730362C00600D3D /* CoreDataManager.swift */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
 		DCC49D18272D45F000DADB4D = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +176,7 @@
 		DCC49D23272D45F000DADB4D /* Guidomia */ = {
 			isa = PBXGroup;
 			children = (
+				DCB3163727302BBB00600D3D /* Coredata */,
 				DC16E086272DA3C4001E676C /* Service */,
 				DCC49D62272D47A900DADB4D /* Utility */,
 				DCC49D5F272D473400DADB4D /* ViewModel */,
@@ -403,9 +420,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB316842730421900600D3D /* VehicleListCoreData.swift in Sources */,
 				DC16E09B272E18CE001E676C /* UITextField+Extension.swift in Sources */,
 				DC16E06F272D9944001E676C /* FilterTableViewCell.swift in Sources */,
 				DC16E0A9272E2D1C001E676C /* Optional+Extension.swift in Sources */,
+				DCB316732730419500600D3D /* CoreDataManager.swift in Sources */,
 				DC16E088272DA3DD001E676C /* Service.swift in Sources */,
 				DCB3162E272FA56300600D3D /* UIViewController+Extension.swift in Sources */,
 				DCC49D6D272D499400DADB4D /* UIColor+Extension.swift in Sources */,
@@ -420,6 +439,7 @@
 				DC16E05E272D8FDF001E676C /* MainViewController.swift in Sources */,
 				DCC49D64272D494700DADB4D /* Constant.swift in Sources */,
 				DC16E082272D9FDB001E676C /* VehicleModel.swift in Sources */,
+				DCB3167F2730419E00600D3D /* Guidomia.xcdatamodeld in Sources */,
 				DCC49D84272D77FE00DADB4D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,6 +769,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCB3163827302BF300600D3D /* Guidomia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCB3163927302BF300600D3D /* Guidomia.xcdatamodel */,
+			);
+			currentVersion = DCB3163927302BF300600D3D /* Guidomia.xcdatamodel */;
+			path = Guidomia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DCC49D19272D45F000DADB4D /* Project object */;
 }

@@ -18,7 +18,7 @@ class FilterTableViewCell: UITableViewCell,
     @IBOutlet private weak var txtVehicleModel: UITextField!
     @IBOutlet private weak var txtVehicleMake: UITextField!
     fileprivate let pickerView = ToolbarPickerView()
-    var vehcileList = [Vehicle]()
+    var vehicleList = [Vehicle]()
     private var listing = [String]()
     private var selectedTextField = UITextField()
     var delegate: FilterCallDelegate?
@@ -60,8 +60,8 @@ extension FilterTableViewCell: UITextFieldDelegate {
     
     func showActionSheet(textField : UITextField) {
         
-        var vehcileMakeList = Array(Set(vehcileList.map({$0.make ?? ""})))
-        var vehcileModelList = Array(Set(vehcileList.filter({$0.make == self.txtVehicleMake.text}).map({$0.model ?? ""})))
+        var vehcileMakeList = Array(Set(vehicleList.map({$0.make ?? ""})))
+        var vehcileModelList = Array(Set(vehicleList.filter({$0.make == self.txtVehicleMake.text}).map({$0.model ?? ""})))
         vehcileMakeList.sort()
         vehcileModelList.sort()
         self.listing = textField == txtVehicleMake ? vehcileMakeList : vehcileModelList

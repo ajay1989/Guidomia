@@ -72,7 +72,7 @@ extension MainViewController: UITableViewDataSource,
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.kFilterCellIdentifier,
                                                      for: indexPath) as! FilterTableViewCell
             cell.delegate = self
-            cell.vehcileList = self.mainViewModel.vehicleList ?? [Vehicle]()
+            cell.vehicleList = self.mainViewModel.vehicleList ?? [Vehicle]()
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.kVehicleCellIdentifier,
