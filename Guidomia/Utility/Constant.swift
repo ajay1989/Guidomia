@@ -17,9 +17,13 @@ let kPros = "Pros"
 let kCons = "Cons"
 let kPrice = "Price"
 let kDidotBoldFont = "Didot-Bold"
-let kErrorJsonParsing = "Not able to parse the json"
 let kAppName = "Guidomia"
 let kOK = "OK"
+let kVehicleMake = "Vehicle Make"
+let kVehicleModel = "Vehicle Model"
+let kCancel = "Cancel"
+let kDone = "Done"
+
 // TableviewCell Indentifier list
 struct TableCellIdentifier {
     
@@ -36,3 +40,8 @@ struct AppColors {
     let colorTextBlack = UIColor.black.withAlphaComponent(0.45)
     let colorTextBulletPoint = UIColor.black
 }
+
+
+// Error messages
+let kErrorJsonParsing = "Not able to parse the json"
+let kErrorSelectVehicleMake = "Please select Vehcile Make first"

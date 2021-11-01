@@ -11,9 +11,8 @@ class MainViewController: BaseViewController {
     
     @IBOutlet weak var heightTopViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var mainTableView: UITableView!
-    private var mainViewModel : MainViewModel!
-    var vehicleData:Vehicle?
-    
+    private var mainViewModel: MainViewModel!
+    var vehicleData: Vehicle?
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -37,6 +36,7 @@ class MainViewController: BaseViewController {
         self.mainViewModel =  MainViewModel()
         self.mainViewModel.delegate = self
         self.mainViewModel.bindVehicleViewModel = {
+            
             self.updateTableView()
         }
     }
@@ -51,7 +51,9 @@ class MainViewController: BaseViewController {
 }
 
 //MARK:- TableView delegate methods
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate, FilterCallDelegate {
+    
+    
     
     // Get number of rows in section of teableview
     func tableView(_ tableView: UITableView,
@@ -68,6 +70,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.kFilterCellIdentifier,
                                                      for: indexPath) as! FilterTableViewCell
+            cell.delegate = self
+            cell.vehcileList = self.mainViewModel.vehicleList ?? [Vehicle]()
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.kVehicleCellIdentifier,
@@ -78,23 +82,30 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row > 0 {
-            let vehcileList = self.mainViewModel.vehicleData
-            let listCount = vehcileList?.count ?? 0
-            if vehcileList?[indexPath.row - 1].collapse == false {
-                let data = vehcileList?[indexPath.row - 1]
-                data?.collapse = true
-            } else {
-                for i in 0..<listCount {
-                    let data = vehcileList?[i]
-                    data?.collapse = i == indexPath.row - 1 ? false : true
-                }
+            
+            self.mainViewModel.updateTableViewOnDidSelect(list: self.mainViewModel.vehicleData ?? [Vehicle](),
+                                                          indexPath: indexPath) { [weak self] in
+                
+                self?.updateTableView()
             }
-            self.mainTableView.reloadData()
         }
     }
+    
+    func callForFilter(make: String,
+                       model: String) {
+        
+        if make == "" && model == "" {
+            self.mainViewModel.resetData()
+        } else {
+            self.mainViewModel.filterForVehcile(make: make,
+                                                model: model)
+        }
+    }
+    
 }
 
 extension MainViewController: MainModelDelegate {

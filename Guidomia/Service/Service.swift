@@ -11,19 +11,20 @@ class Service: NSObject {
     
     //Fetch from Local file json
     func fetchVehicleDataFromJson<T: Decodable>(input: String,
-                                                completion : @escaping (_ response: T,_ status: Bool) -> ()) {
+                                                completion : @escaping (_ response: T?) -> ()) {
         
         do {
             guard let jsonUrl = Bundle.main.url(forResource: input, withExtension: kJson) else {
+                completion(nil)
                 return
             }
             let data = try Data(contentsOf: jsonUrl)
             let response = try JSONDecoder().decode(T.self, from: data)
-            completion(response, true)
+            completion(response)
         }
         catch {
             print(error)
-            completion([Vehicle]() as! T, false)
+            completion(nil)
         }
     }
 }

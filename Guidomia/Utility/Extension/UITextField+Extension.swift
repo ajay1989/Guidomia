@@ -20,7 +20,7 @@ extension UITextField {
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.shadowOpacity = 0.8
         self.layer.shadowRadius = 3.0
-        self.layer.shadowOffset = CGSize.zero // Use any CGSize
+        self.layer.shadowOffset = CGSize(width: 1.0, height: 2.0) // Use any CGSize
         self.layer.shadowColor = UIColor.black.cgColor
         let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
         self.leftView = paddingView

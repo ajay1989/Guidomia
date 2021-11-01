@@ -11,8 +11,8 @@ class VehicleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bottomstackViewConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var heightStackViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var prosConsStackView: UIStackView!
+    @IBOutlet private weak var heightStackViewConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var prosConsStackView: UIStackView!
     @IBOutlet private weak var viewRating: CosmosView!
     @IBOutlet private weak var lblPrice: UILabel!
     @IBOutlet private weak var lblModelName: UILabel!
@@ -38,7 +38,7 @@ class VehicleTableViewCell: UITableViewCell {
         guard let vehcileData = vehicleModelData else {
             return
         }
-        lblModelName.text = "\(vehcileData.make.unwrappedValue) \(vehcileData.model.unwrappedValue)"
+        lblModelName.text = String("\(vehcileData.make.unwrappedValue) \(vehcileData.model.unwrappedValue)")
         lblPrice.text = "\(kPrice) : \(vehcileData.customerPrice.unwrappedValue/1000)k"
         viewRating.totalStars = vehcileData.rating.unwrappedValue
         imgVehicle.image = UIImage(named: "\(vehcileData.make.unwrappedValue) \(vehcileData.model.unwrappedValue)")
@@ -56,6 +56,7 @@ class VehicleTableViewCell: UITableViewCell {
     
     func setProsCons() {
         
+        self.prosConsStackView.subviews.forEach({$0.removeFromSuperview()})
         let prosList = vehicleModelData?.prosList?.filter({$0 != "" }) ?? [String]()
         let consList = vehicleModelData?.consList?.filter({$0 != "" }) ?? [String]()
         let prosCount = prosList.count
@@ -86,9 +87,13 @@ class VehicleTableViewCell: UITableViewCell {
                                         y: verticalMargin,
                                         width: prosConsStackView.frame.width - 20.0,
                                         height: CGFloat(list.count * 30) + 30.0))
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: titleView.frame.width, height: 30))
+        let titleLabel = UILabel(frame: CGRect(x: 0,
+                                               y: 0,
+                                               width: titleView.frame.width,
+                                               height: 30))
         titleLabel.text = "\(title) : "
-        titleLabel.font = UIFont.systemFont(ofSize: 21.0, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 21.0,
+                                            weight: .medium)
         titleLabel.textColor = appColor.colorDarkGrey
         titleView.addSubview(titleLabel)
         var verticalMarginOfBullet: CGFloat = 30.0

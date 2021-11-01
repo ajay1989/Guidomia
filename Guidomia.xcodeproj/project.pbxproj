@@ -19,6 +19,7 @@
 		DC16E09B272E18CE001E676C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E09A272E18CE001E676C /* UITextField+Extension.swift */; };
 		DC16E0A9272E2D1C001E676C /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */; };
 		DCB3162E272FA56300600D3D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3162D272FA56300600D3D /* UIViewController+Extension.swift */; };
+		DCB31633272FD44300600D3D /* ToolbarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB31632272FD44300600D3D /* ToolbarPickerView.swift */; };
 		DCC49D25272D45F000DADB4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D24272D45F000DADB4D /* AppDelegate.swift */; };
 		DCC49D27272D45F000DADB4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D26272D45F000DADB4D /* SceneDelegate.swift */; };
 		DCC49D2C272D45F000DADB4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2A272D45F000DADB4D /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		DC16E09A272E18CE001E676C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		DC16E0A8272E2D1C001E676C /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		DCB3162D272FA56300600D3D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		DCB31632272FD44300600D3D /* ToolbarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPickerView.swift; sourceTree = "<group>"; };
 		DCC49D21272D45F000DADB4D /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC49D24272D45F000DADB4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC49D26272D45F000DADB4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				DC16E074272D9B60001E676C /* RatingLibrary */,
 				DCC49D88272D8AE600DADB4D /* Extension */,
 				DCC49D63272D494700DADB4D /* Constant.swift */,
+				DCB31632272FD44300600D3D /* ToolbarPickerView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				DC16E088272DA3DD001E676C /* Service.swift in Sources */,
 				DCB3162E272FA56300600D3D /* UIViewController+Extension.swift in Sources */,
 				DCC49D6D272D499400DADB4D /* UIColor+Extension.swift in Sources */,
+				DCB31633272FD44300600D3D /* ToolbarPickerView.swift in Sources */,
 				DCC49D8D272D8B2400DADB4D /* UIView+Extension.swift in Sources */,
 				DC16E076272D9B70001E676C /* CosmosDistrib.swift in Sources */,
 				DCC49D25272D45F000DADB4D /* AppDelegate.swift in Sources */,
