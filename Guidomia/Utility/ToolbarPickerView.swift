@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
+/// Protocol define
 protocol ToolbarPickerViewDelegate: class {
+    
     func didTapDone()
     func didTapCancel()
 }
@@ -16,19 +18,22 @@ protocol ToolbarPickerViewDelegate: class {
 class ToolbarPickerView: UIPickerView {
 
     public private(set) var toolbar: UIToolbar?
-    public weak var toolbarDelegate: ToolbarPickerViewDelegate?
+    public weak var toolbarDelegate: ToolbarPickerViewDelegate?       
 
     override init(frame: CGRect) {
+        
         super.init(frame: frame)
         self.commonInit()
     }
 
     required init?(coder aDecoder: NSCoder) {
+        
         super.init(coder: aDecoder)
         self.commonInit()
     }
 
     private func commonInit() {
+        
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
@@ -39,8 +44,8 @@ class ToolbarPickerView: UIPickerView {
                                          style: .plain,
                                          target: self,
                                          action: #selector(self.doneTapped))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace
-                                          , target: nil,
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                          target: nil,
                                           action: nil)
         let cancelButton = UIBarButtonItem(title: kCancel,
                                            style: .plain,
@@ -53,11 +58,15 @@ class ToolbarPickerView: UIPickerView {
         self.toolbar = toolBar
     }
 
+    /// done button of toolbar defined
     @objc func doneTapped() {
+        
         self.toolbarDelegate?.didTapDone()
     }
 
+    /// cancel button of toolbar defined
     @objc func cancelTapped() {
+        
         self.toolbarDelegate?.didTapCancel()
     }
 }

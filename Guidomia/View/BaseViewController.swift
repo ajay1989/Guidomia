@@ -15,8 +15,9 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // Set Navigation title dynamically
-    func setNavigationTitle(title:String) {
+    /// Set Navigation title dynamically
+    /// - Parameter title: Title of navigation
+    func setNavigationTitle(title: String) {
         
         let label = UILabel()
         label.textColor = UIColor.white

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 let kScreenSize = UIScreen.main.bounds.size
-let kMainNavigationTitle = "GUIDOMIA"
 let kAspectRatio:CGFloat = 66.6666666667
 let kCarList = "car_list"
 let kJson = "json"
@@ -23,15 +22,16 @@ let kVehicleMake = "Vehicle Make"
 let kVehicleModel = "Vehicle Model"
 let kCancel = "Cancel"
 let kDone = "Done"
+let kEntityName = "VehicleList"
 
-// TableviewCell Indentifier list
+/// TableviewCell Indentifier list
 struct TableCellIdentifier {
     
     let kFilterCellIdentifier = "FilterTableViewCell"
     let kVehicleCellIdentifier = "VehicleTableViewCell"
 }
 
-// Custom Color list
+/// Custom Color list
 struct AppColors {
     
     let colorOrange = UIColor(hex: "FC6016")
@@ -42,6 +42,16 @@ struct AppColors {
 }
 
 
-// Error messages
+/// Error messages
 let kErrorJsonParsing = "Not able to parse the json"
 let kErrorSelectVehicleMake = "Please select Vehcile Make first"
+
+/// NSManagedDataKeys
+let kCustomerPrice = "customerPrice"
+let kMarkerPrice = "marketPrice"
+let kConsList = "consList"
+let kProsList = "prosList"
+let kRating = "rating"
+let kMake = "make"
+let kModel = "model"
+

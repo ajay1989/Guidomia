@@ -12,16 +12,16 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var heightTopViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var mainTableView: UITableView!
     private var mainViewModel: MainViewModel!
-    var vehicleData: Vehicle?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.setNavigationTitle(title: kMainNavigationTitle)
+        self.setNavigationTitle(title: kAppName.uppercased())
         self.setUIView()
         self.callToViewModel()
     }
     
-    //Main UIView Setup
+    /// Main UIView Setup
     func setUIView() {
         
         self.heightTopViewConstraint.constant = kAspectRatio * kScreenSize.width/100.0
@@ -30,7 +30,7 @@ class MainViewController: BaseViewController {
         self.mainTableView.autoLayoutRegisterNib(nibName: cellIdentifier.kVehicleCellIdentifier)
     }
     
-    //calling of ViewModel class
+    /// calling of ViewModel class
     func callToViewModel() {
         
         self.mainViewModel =  MainViewModel()
@@ -40,7 +40,7 @@ class MainViewController: BaseViewController {
         }
     }
     
-    // reload tableview
+    /// reload tableview
     func updateTableView() {
         
         DispatchQueue.main.async {
@@ -50,22 +50,16 @@ class MainViewController: BaseViewController {
 }
 
 //MARK:- TableView delegate methods
-extension MainViewController: UITableViewDataSource,
-                              UITableViewDelegate,
-                              FilterCallDelegate {
-    
-    
+extension MainViewController: UITableViewDataSource, UITableViewDelegate, FilterCallDelegate {
     
     // Get number of rows in section of teableview
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return (self.mainViewModel.vehicleData?.count ??  0) + 1
     }
     
     //Set cell for each row
-    func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = TableCellIdentifier()
         if indexPath.row == 0 {
@@ -83,8 +77,7 @@ extension MainViewController: UITableViewDataSource,
         }
     }
     
-    func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row > 0 {
             
@@ -96,21 +89,23 @@ extension MainViewController: UITableViewDataSource,
         }
     }
     
-    func callForFilter(make: String,
-                       model: String) {
+    /// Call filter
+    /// - Parameter make: vehicle make string
+    /// - Parameter make: vehicle model string
+    func callForFilter(make: String, model: String) {
         
         if make.isEmpty && model.isEmpty {
             self.mainViewModel.resetData()
         } else {
-            self.mainViewModel.filterForVehcile(make: make,
-                                                model: model)
+            self.mainViewModel.filterForVehcile(make: make, model: model)
         }
     }
-    
 }
 
 extension MainViewController: MainModelDelegate {
     
+    /// Show alert
+    /// - Parameter title: message body of alert
     func showAlert(title: String) {
         self.popupAlert(message: title)
     }

@@ -29,7 +29,6 @@
 		DCC49D2E272D45F200DADB4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2D272D45F200DADB4D /* Assets.xcassets */; };
 		DCC49D31272D45F200DADB4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D2F272D45F200DADB4D /* LaunchScreen.storyboard */; };
 		DCC49D3C272D45F300DADB4D /* GuidomiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D3B272D45F300DADB4D /* GuidomiaTests.swift */; };
-		DCC49D47272D45F300DADB4D /* GuidomiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D46272D45F300DADB4D /* GuidomiaUITests.swift */; };
 		DCC49D64272D494700DADB4D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D63272D494700DADB4D /* Constant.swift */; };
 		DCC49D6D272D499400DADB4D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC49D6C272D499400DADB4D /* UIColor+Extension.swift */; };
 		DCC49D72272D4A0900DADB4D /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = DCC49D71272D4A0900DADB4D /* car_list.json */; };
@@ -40,13 +39,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		DCC49D38272D45F300DADB4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCC49D19272D45F000DADB4D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DCC49D20272D45F000DADB4D;
-			remoteInfo = Guidomia;
-		};
-		DCC49D43272D45F300DADB4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DCC49D19272D45F000DADB4D /* Project object */;
 			proxyType = 1;
@@ -82,9 +74,6 @@
 		DCC49D37272D45F300DADB4D /* GuidomiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC49D3B272D45F300DADB4D /* GuidomiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaTests.swift; sourceTree = "<group>"; };
 		DCC49D3D272D45F300DADB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCC49D42272D45F300DADB4D /* GuidomiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCC49D46272D45F300DADB4D /* GuidomiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITests.swift; sourceTree = "<group>"; };
-		DCC49D48272D45F300DADB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC49D63272D494700DADB4D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DCC49D6C272D499400DADB4D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DCC49D71272D4A0900DADB4D /* car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
@@ -102,13 +91,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DCC49D34272D45F300DADB4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCC49D3F272D45F300DADB4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,7 +140,6 @@
 			children = (
 				DCC49D23272D45F000DADB4D /* Guidomia */,
 				DCC49D3A272D45F300DADB4D /* GuidomiaTests */,
-				DCC49D45272D45F300DADB4D /* GuidomiaUITests */,
 				DCC49D22272D45F000DADB4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,7 +149,6 @@
 			children = (
 				DCC49D21272D45F000DADB4D /* Guidomia.app */,
 				DCC49D37272D45F300DADB4D /* GuidomiaTests.xctest */,
-				DCC49D42272D45F300DADB4D /* GuidomiaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,15 +176,6 @@
 				DCC49D3D272D45F300DADB4D /* Info.plist */,
 			);
 			path = GuidomiaTests;
-			sourceTree = "<group>";
-		};
-		DCC49D45272D45F300DADB4D /* GuidomiaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DCC49D46272D45F300DADB4D /* GuidomiaUITests.swift */,
-				DCC49D48272D45F300DADB4D /* Info.plist */,
-			);
-			path = GuidomiaUITests;
 			sourceTree = "<group>";
 		};
 		DCC49D5A272D465500DADB4D /* Common */ = {
@@ -325,24 +296,6 @@
 			productReference = DCC49D37272D45F300DADB4D /* GuidomiaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DCC49D41272D45F300DADB4D /* GuidomiaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DCC49D51272D45F300DADB4D /* Build configuration list for PBXNativeTarget "GuidomiaUITests" */;
-			buildPhases = (
-				DCC49D3E272D45F300DADB4D /* Sources */,
-				DCC49D3F272D45F300DADB4D /* Frameworks */,
-				DCC49D40272D45F300DADB4D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DCC49D44272D45F300DADB4D /* PBXTargetDependency */,
-			);
-			name = GuidomiaUITests;
-			productName = GuidomiaUITests;
-			productReference = DCC49D42272D45F300DADB4D /* GuidomiaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -356,10 +309,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					DCC49D36272D45F300DADB4D = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = DCC49D20272D45F000DADB4D;
-					};
-					DCC49D41272D45F300DADB4D = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = DCC49D20272D45F000DADB4D;
 					};
@@ -380,7 +329,6 @@
 			targets = (
 				DCC49D20272D45F000DADB4D /* Guidomia */,
 				DCC49D36272D45F300DADB4D /* GuidomiaTests */,
-				DCC49D41272D45F300DADB4D /* GuidomiaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -400,13 +348,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DCC49D35272D45F300DADB4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCC49D40272D45F300DADB4D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -452,14 +393,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCC49D3E272D45F300DADB4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCC49D47272D45F300DADB4D /* GuidomiaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -467,11 +400,6 @@
 			isa = PBXTargetDependency;
 			target = DCC49D20272D45F000DADB4D /* Guidomia */;
 			targetProxy = DCC49D38272D45F300DADB4D /* PBXContainerItemProxy */;
-		};
-		DCC49D44272D45F300DADB4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DCC49D20272D45F000DADB4D /* Guidomia */;
-			targetProxy = DCC49D43272D45F300DADB4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -691,44 +619,6 @@
 			};
 			name = Release;
 		};
-		DCC49D52272D45F300DADB4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuidomiaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.GuidomiaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Guidomia;
-			};
-			name = Debug;
-		};
-		DCC49D53272D45F300DADB4D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuidomiaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.GuidomiaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Guidomia;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -755,15 +645,6 @@
 			buildConfigurations = (
 				DCC49D4F272D45F300DADB4D /* Debug */,
 				DCC49D50272D45F300DADB4D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DCC49D51272D45F300DADB4D /* Build configuration list for PBXNativeTarget "GuidomiaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DCC49D52272D45F300DADB4D /* Debug */,
-				DCC49D53272D45F300DADB4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

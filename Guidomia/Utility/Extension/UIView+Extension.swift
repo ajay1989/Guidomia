@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    //Corder Radius for UIView
+    /// Corder Radius for UIView
     @IBInspectable
     var cornerRadius: CGFloat {
         

@@ -10,9 +10,8 @@ import UIKit
 
 extension UIColor {
     
-    //UIColor hex code
-    convenience init(hex: String,
-                     alpha: CGFloat = 1) {
+    /// UIColor hex code
+    convenience init(hex: String, alpha: CGFloat = 1) {
         
         let scanner = Scanner(string: hex)
         scanner.currentIndex = scanner.string.startIndex

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Model class for Vehicle
+/// Model class for Vehicle
 class Vehicle: Decodable {
     
     let consList : [String]?
@@ -18,6 +18,7 @@ class Vehicle: Decodable {
     let prosList : [String]?
     let rating : Int?
     var collapse: Bool = true
+    
     enum CodingKeys: String, CodingKey {
         
         case consList = "consList"

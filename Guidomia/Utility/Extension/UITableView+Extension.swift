@@ -10,7 +10,8 @@ import UIKit
 
 extension UITableView {
     
-    //Register of tableviewcell
+    /// Register of tableviewcell
+    /// - Parameter nibName: nibname pass as string
     func autoLayoutRegisterNib(nibName:String?) {
         
         if let nibName = nibName {

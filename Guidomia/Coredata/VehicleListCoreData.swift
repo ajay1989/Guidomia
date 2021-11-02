@@ -12,10 +12,10 @@ import CoreData
 public class VehicleCoreData: NSManagedObject {
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<VehicleCoreData> {
-        return NSFetchRequest<VehicleCoreData>(entityName: "VehicleList")
+        return NSFetchRequest<VehicleCoreData>(entityName: kEntityName)
     }
 
-    @NSManaged public var consList: [String]?
+    @NSManaged public var consList: [String]? 
     @NSManaged public var customerPrice: NSNumber?
     @NSManaged public var make: String?
     @NSManaged public var marketPrice: NSNumber?

@@ -12,8 +12,7 @@ protocol FilterCallDelegate {
     func showAlert(title:String)
 }
 
-class FilterTableViewCell: UITableViewCell,
-                           UIPickerViewDelegate {
+class FilterTableViewCell: UITableViewCell, UIPickerViewDelegate {
 
     @IBOutlet private weak var txtVehicleModel: UITextField!
     @IBOutlet private weak var txtVehicleMake: UITextField!
@@ -22,6 +21,7 @@ class FilterTableViewCell: UITableViewCell,
     private var listing = [String]()
     private var selectedTextField = UITextField()
     var delegate: FilterCallDelegate?
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
@@ -36,13 +36,13 @@ class FilterTableViewCell: UITableViewCell,
         self.pickerView.toolbarDelegate = self
     }
 
-    override func setSelected(_ selected: Bool,
-                              animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         
         super.setSelected(selected, animated: animated)
     }
 }
 
+/// UITextfield Delegate
 extension FilterTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -58,6 +58,8 @@ extension FilterTableViewCell: UITextFieldDelegate {
         return true
     }
     
+    /// Show action sheet from bottom
+    /// - Parameter textField: specific textfield which is selected
     func showActionSheet(textField : UITextField) {
         
         var vehcileMakeList = Array(Set(vehicleList.map({$0.make ?? ""})))
@@ -69,6 +71,7 @@ extension FilterTableViewCell: UITextFieldDelegate {
     }
 }
 
+/// Picker view show data
 extension FilterTableViewCell: UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView,
@@ -80,21 +83,18 @@ extension FilterTableViewCell: UIPickerViewDataSource {
         return 1
     }
 
-    func pickerView(_ pickerView: UIPickerView,
-                    titleForRow row: Int,
-                    forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.listing[row]
     }
 
-    func pickerView(_ pickerView: UIPickerView,
-                    didSelectRow row: Int,
-                    inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(self.listing[row])
     }
 }
 
 extension FilterTableViewCell: ToolbarPickerViewDelegate {
 
+    /// toolbal done button tap
     func didTapDone() {
         
         let row = self.pickerView.selectedRow(inComponent: 0)
@@ -108,6 +108,7 @@ extension FilterTableViewCell: ToolbarPickerViewDelegate {
                                      model: self.txtVehicleModel.text ?? "")
     }
 
+    // toolbal cancel button tap
     func didTapCancel() {
         self.selectedTextField.text = ""
         if selectedTextField == txtVehicleMake {
@@ -115,6 +116,6 @@ extension FilterTableViewCell: ToolbarPickerViewDelegate {
         }
         self.selectedTextField.resignFirstResponder()
         self.delegate?.callForFilter(make: self.txtVehicleMake.text ?? "",
-                                     model: self.txtVehicleModel.text ?? "")
+                                     model: self.txtVehicleModel.text ?? "") 
     }
 }
